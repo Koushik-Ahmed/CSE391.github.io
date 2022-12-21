@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="bn-BD">
+    <head>
+        <title>Portfolio</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("page_location").innerHTML ="Page location: " + window.location.href;
+        
+                document.getElementById("last_modified").innerHTML = "Last updated: " + document.lastModified;
+            });
+            
+        </script>
+
+        
+
+    </head>
+
+    <body>
+        <div class="navbar">
+            <h2>Koushik Ahmed</h2>
+            <p>Undergraduate CS Student</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#favourites">Favourites</a>
+            </nav>
+        </div>
+        <div class="intro">
+            <div style="padding-top: 15vh;">
+                <img src="assets/user_img.jpg" title="user image" alt="user image" class="rounded-circle">
+            </div>
+            <p class="intro-text" >
+                As-salamu alaykum, My name is Koushik Ahmed. I am from Bangladesh. I am <br>
+                currently a (B.Sc.) CS student at BRAC university. I am a quick learner. 
+            </p>
+        </div>
+
+        <section id = "about" class="about">
+            <h1>About</h1>
+            <div class="about_text">
+                <p>
+                    Hello I am <b>Koushik Ahmed</b>, student in the Department of CS at <a href="http://bracu.ac.bd">Brac University</a>
+                </p>
+                <p>
+                    I am a student who always wants to learn. I practice to maintain my daily routine. I love to play outdoor games.
+                </p>
+                <p>
+                    Besides I want to learn new technical skills. I want to learn frameworks like springboot, flutter, django etc.
+                </p>
+
+                <h5>
+                    <i>Favourite quote:</i>
+                </h5>
+
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    “No pain, No gain"
+                </blockquote>
+            </div>
+            
+           
+        </section>
+
+        <section id = "education" class="education">
+            <h1>Education</h1>
+            <div>
+                <table>
+                    <tr>
+                        <td><img src="assets/university_logo.png" title="University logo" alt="university logo"></td>
+                        <td class="line"> </td>
+                        <td class="card">
+                            <div>
+                                <h1>
+                                    <a href="http://bracu.ac.bd">BRAC university</a>
+                                </h1>
+                                <p>B.Sc. in Computer Science</p>
+                                <p>2019-2022</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><img src="assets/college_logo.jpg" title="college logo" alt="college logo"></td>
+                        <td class="line"> </td>
+                        <td class="card">
+                            <div>
+                                <h1>
+                                    <a href="https://rajbarigovtcollege.edu.bd/">Rajbari Government College</a>
+                                </h1>
+                                <p>Higher Secondary School Certificate</p>
+                                <p>2015-2017</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                    
+
+                    <tr>
+                        <td><img src="assets/school_logo.jpg" title="School logo" alt="school logo" ></td>
+                        <td class="line"> </td>
+                        <td class="card">
+                            <div>
+                                <h1>
+                                    <a href="http://www.rajbarigovthighschool.edu.bd/">Rajbari Govt. High school</a>
+                                </h1>
+                                <p>Secondary school certificate</p>
+                                <p>2006-2015</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+           
+        </section>
+
+
+        <section id = "skills" class="skills">
+            <h1>Skills</h1>
+
+            <table>
+                <tr>
+                    <td>
+                        <div class="row">
+                            
+                            <div class="card">
+                                <div>
+                                    <div class="header">
+                                        <h1>Java</h1>
+                                    </div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Problem-solving</li>
+                                            <li>Data-structure</li>
+                                            <li>Algorithms</li>
+                                            <li>JavaFX</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="header">
+                                        <h1>Python</h1>
+                                    </div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Machine learning</li>
+                                            <li>Pandas</li>
+                                            <li>Sklearn</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            
+                            <div class="card">
+                                <div>
+                                    <div class="header">
+                                        <h1>HTML, CSS, JS</h1>
+                                    </div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Web design</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div>
+                                    <div class="header">
+                                        <h1>Django</h1>
+                                        
+                                    </div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Django web</li>
+                                            <li>Django-rest-api</li>
+                                            <li>Mysql</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+        </section>
+
+        <section id = "favourites" class="favourites">
+            <h1>Favourites</h1>
+            <div class="favs">
+                <table>
+                    <tr class="favs">
+                        <th>Item</th>
+                        <th>List</th>
+                    </tr>
+                    <tr class="favs">
+                        <td class="fav_listitem" rowspan="3"><p>Movie</p><p>Drama</p></td>
+                        <td>John Wick</td>
+                    </tr>
+                    <tr class="favs">
+                        <td>Squide Game</td>
+                    </tr>
+                    <tr class="favs">
+                        <td>Iron Man</td>
+                    </tr>
+                    <tr class="favs">
+                        <td rowspan="4">Tv series</td>
+                        <td>Squide Game</td>
+                    </tr>
+                    <tr class="favs">
+                        <td>Hacker</td>
+                    </tr>
+                    <tr class="favs">
+                        <td>The Imitade Game</td>
+                    </tr>
+                    <tr class="favs">
+                       <td>Game of thrones</td>
+                    </tr>
+                    <tr class="favs">
+                        <td rowspan="3">Link</td>
+                        <td>1) <a href="http://youtube.com"> Youtube</a></td>
+                    </tr>
+                    <tr class="favs">
+                        <td>2) <a href="https://bux.bracu.ac.bd/dashboard"> BuX</a></td>
+                    </tr>
+                    <tr class="favs">
+                        <td>3) <a href="http://www.udacity.com/"> Udacity</a></td>
+                    </tr>
+                </table>
+                
+            </div>
+            
+           
+        </section>
+        
+
+        <footer>
+            <p>Contact:
+                <a href="https://www.linkedin.com/in/koushik7ahmed/">LinkedIn</a>,
+                <a href="koushik.ahmed@g.bracu.ac.bd">koushik.ahmed@g.bracu.ac.bd</a>
+            </p>
+             <p id="page_location">Page location: </p>
+             <p id="last_modified">Last updated: </p>
+        </footer>
+    </body>
+    
+</html>
