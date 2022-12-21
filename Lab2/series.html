@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bd-BD">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            p {
+                text-align: right;
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        
+        <table>
+            <tr>
+                <td><p>Input Series of Numbers</p></td>
+                <td> <input style="display:inline-block;"  id="num-list" name="num-list"></td>        
+             </tr>
+            <tr>
+               <td><p>Max: </p></td>
+               <td id="max"> </td>        
+            </tr>
+            <tr>
+                <td><p>Min: </p></td>
+                <td id="min"> </td>        
+             </tr>
+             <tr>
+                <td><p>Sum: </p></td>
+                <td id="sum"> </td>        
+             </tr>
+             <tr>
+                <td><p>Average: </p></td>
+                <td id="avg"> </td>        
+             </tr>
+             <tr>
+                <td><p>Revsrse-order: </p></td>
+                <td id="reversed"> </td>        
+             </tr>
+        </table>
+        
+        
+    </body>
+    <script type="text/javascript">
+        var el = document. getElementById("num-list");
+        
+        el.addEventListener("input", function(event) {
+                console.log("String");
+                var max = -Infinity;
+                var min = Infinity;
+                var sum  = 0;
+                var nums = el.value.split(",");
+                for(let i = 0; i < nums.length; i++){
+                    max = Math.max(max,parseInt(nums[i]));
+                    min = Math.min(max,parseInt(nums[i]));
+                    sum += parseInt(nums[i]);
+                }
+                nums.reverse();
+                document.getElementById('max').textContent = max;
+                document.getElementById('min').textContent = min;
+                document.getElementById('avg').textContent = sum / nums.length;
+                document.getElementById('sum').textContent = sum;
+                document.getElementById('reversed').textContent = nums;
+            
+        });
+        
+       
+    </script>
+</html>

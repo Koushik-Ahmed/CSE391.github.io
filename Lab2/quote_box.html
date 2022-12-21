@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="bd-BD">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <p id="quote" class="quote-box"> faf</p>
+                </td>
+                <td>
+                    <div style="display: flex;">
+            
+                        <div style="display: inline-block;">
+                            <button id="btn1" onclick="buttonClick(this.id)" class="color-button"></button>
+                        </div>
+                        <div style="display: inline-block;">
+                            <button id="btn2" onclick="buttonClick(this.id)" class="color-button"></button>
+                        </div>
+                    </div>
+                    <div style="display: flex;">
+            
+                        <div style="display: inline-block;">
+                            <button id="btn3" onclick="buttonClick(this.id)" class="color-button"></button>
+                        </div>
+                        <div style="display: inline-block;">
+                            <button id="btn4" onclick="buttonClick(this.id)" class="color-button"></button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        
+    </body>
+    <script type="text/javascript">
+        
+        const quotes = [
+            "Do good and good will come to you.",
+            "Today is your opportunity to build the tomorrow you want.",
+            "Be so busy improving yourself that you have no time to criticize others.",
+            "Work hard in silence, let your success be your noise.",
+            "Strive for progress not perfection.",
+            "You will face many defeats in life, but never let yourself be defeated.",
+            "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+            "In the end, it's not the years in your life that count.",
+            "Never let the fear of striking out keep you from playing the game."
+        ];
+
+        var qouteLen = quotes.length;
+
+        var quoteBox = document.getElementById("quote");
+        quoteBox.innerText = quotes[Math.floor(Math.random() * qouteLen)];
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+
+        const attrs = {
+            "btn1":{
+                "bg" : "red",
+                "bc" : "aquamarine",
+                "font_size" : "medium",
+                "font_family" : "Lucida Handwriting"
+            },
+            "btn2":{
+                "bg" : "blue",
+                "bc" : "green",
+                "font_size" : "x-large",
+                "font_family" : "Trebuchet MS"
+
+            },
+            "btn3":{
+                "bg" : "yellow",
+                "bc" : "blue",
+                "font_size" : "xx-large",
+                "font_family" : "Brush Script MT"
+
+            },
+            "btn4":{
+                "bg" : "green",
+                "bc" : "purple",
+                "font_size" : "larger",
+                "font_family" : "Comic Sans MS"
+
+            },
+        };
+
+        btn1.style.backgroundColor = "red";
+        btn2.style.backgroundColor = "blue";
+        btn3.style.backgroundColor = "yellow";
+        btn4.style.backgroundColor = "green";
+        function buttonClick(btn_id){
+            quoteBox.innerText = quotes[Math.floor(Math.random() * qouteLen)];
+            quoteBox.style.borderColor = attrs[btn_id]["bc"];
+            quoteBox.style.fontSize = attrs[btn_id]["font_size"];
+            quoteBox.style.backgroundColor = document.getElementById(btn_id).style.backgroundColor;
+            quoteBox.style.fontFamily = attrs[btn_id]["font_family"];
+        }
+    </script>
+</html>

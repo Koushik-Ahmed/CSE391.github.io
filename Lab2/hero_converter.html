@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bd-BD">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+        <div class="converter-holder">
+            <label for="weight">Convert</label>
+            <input style="display:inline-block;" type="number" step="any" id="num" name="weight">
+            <select name="convert-options" id="convert-options">
+                <option value="lb-kg">lb to kg</option>
+                <option value="kg-lb">kg to lb</option>
+            </select>
+            <input type="submit" value="Go" onclick="convert()">
+                                
+            <p style="display:inline-block;" id="result"></p>
+
+            
+        </div>
+        
+    </body>
+    <script type="text/javascript">
+        function convert() {
+            
+            var weight = document.getElementById("num").value;
+            var option = document.getElementById("convert-options").value;
+            if(option == 'lb-kg'){
+                document.getElementById("result").innerHTML = weight * 0.4536 + ' Kilograms';
+            }else{
+                document.getElementById("result").innerHTML = weight * 2.2046 + ' Pounds';
+            }
+            
+        }
+    </script>
+</html>

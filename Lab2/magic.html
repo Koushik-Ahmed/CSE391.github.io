@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="bd-BD">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <h1>Magic!</h1>
+        <textarea id="textarea" name="textarea" rows="13" cols="70">
+            Sample Item 1
+            Sample Item 2
+            Sample Item 3
+            Sample Item 4
+            &nbsp;
+            Sample Item 5
+            Sample Item 6
+            &nbsp;
+            &nbsp;
+            Sample Item 7
+        </textarea>
+
+        <div class="flex-container">
+             <button id="b1" onclick="clearText()">Clear it</button>
+             <button id="b2" onclick="capitalize()">Capitalize</button>
+             <button id="b3" onclick="sort()">Sort</button>
+             <button id="b4" onclick="reverse()">Reverse</button>
+             <button id="b5" onclick="stripBlank()">Strip blank</button>
+             <button id="b6" onclick="addNumber()">Add numbers</button>
+             <button id="b7" onclick="shuffle()">Shuffle</button>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var textArea = document.getElementById("textarea");
+        
+        function clearText(){
+            textArea.value = "";
+        }
+
+        function capitalize(){
+            var button  = document.getElementById("b2");
+            if(button.innerText == "Capitalize"){
+                textArea.value = textArea.value.toUpperCase();
+                button.innerText = "Smallize";
+            }else{
+                textArea.value = textArea.value.toLowerCase();
+                button.innerText = "Capitalize";
+            }
+        }
+        
+        function divideInLines(text){
+            return text.split("\n");
+
+        }
+
+        function buildText(arr){
+            var text ="";
+            for(let i = 0; i < arr.length; i++){
+                text += arr[i];
+                if(i != arr.length - 1)
+                    text += "\n";
+            }
+            return text;
+        }
+
+        function sort(){
+            var lines = divideInLines(textArea.value);
+            lines.sort();
+            
+            textArea.value = buildText(lines);
+        }
+
+        function reverse(){
+            var lines = divideInLines(textArea.value);
+            for(let i = 0; i < lines.length; i++){
+                lines[i] = lines[i].split("").reverse().join("");
+            }
+            textArea.value = buildText(lines);
+        }
+
+        function stripBlank(){
+            var lines = divideInLines(textArea.value);
+            var newLines=[];
+            for(let i = 0; i < lines.length; i++){
+                lines[i] = lines[i].trimStart();
+                if(lines[i].length > 0){
+                    newLines.push(lines[i]);
+                }
+            }
+            textArea.value = buildText(newLines);
+        }
+
+        function addNumber(){
+            var lines = divideInLines(textArea.value);
+            for(let i = 0; i < lines.length; i++){
+                lines[i] = (i+1).toString() + ". " + lines[i];
+            }
+            textArea.value = buildText(lines);
+
+        }
+
+        function shuffle(){
+            var lines = divideInLines(textArea.value);
+            for(let i = 0; i < lines.length; i++){
+                var r1 = Math.floor(Math.random() * lines.length);
+                var r2 = Math.floor(Math.random() * lines.length);
+                var temp = lines[r1];
+                lines[r1] = lines[r2];
+                lines[r2] = temp;
+            }
+            textArea.value = buildText(lines);
+
+        }
+    </script>
+</html>
