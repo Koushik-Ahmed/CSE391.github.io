@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: 'Roboto Mono', 'Titillium Web', sans-serif;
+    background: linear-gradient(to right, #42275a, #734b6d);
+    color: white;
+}
+#header{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 3px 3px rgba(40,6,32,0.59);
+    background-color: rgba(0, 0, 0, .5);
+    font-family: century;
+    padding: 30px;
+}
+
+
+.item-header{
+    text-align: center;
+    font-family: "Righteous", "Roboto Mono", sans-serif;
+    font-weight: lighter;
+    font-size: 35px;
+    margin: 15px;
+
+}
+
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.login-form:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
